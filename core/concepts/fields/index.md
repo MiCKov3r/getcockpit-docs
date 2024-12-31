@@ -2,6 +2,8 @@
 
 Cockpit provides a set of fields for structuring and managing your content.
 
+It is generally not recommended to use *kebab-case* for field names, but instead *camel-case* - ***fieldName***.
+
 [[toc]]
 
 ## Field types
@@ -13,8 +15,6 @@ Content models (singletons and collections) as well as pages consist of a variou
 Depending on the field type the content model's data contains different values. These values are described foreach field type in this section of the documentations as *Example result*.
 
 We use example field names and configuration to provide you with concrete example data. Depending on your field configuration, the values and structure differ from these.
-
-It is generally not recommended to use *kebab-case* for field names, but instead *camel-case* - ***fieldName***.
 
 ### Asset
 
