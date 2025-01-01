@@ -65,6 +65,8 @@ Example result:
     "_id": "aefbbc4638363554f700010e"
 }
 ```
+![image](https://github.com/user-attachments/assets/5d8899f7-04d9-4f10-bd84-66d866c4d057)
+
 
 ### Boolean
 
@@ -78,7 +80,7 @@ Example result:
 "boolean-example": false
 ```
 
-Field options :
+#### Options
 
 ```json:no-line-numbers
 {
@@ -86,6 +88,11 @@ Field options :
   default: true // set default value to TRUE
 }
 ```
+![image](https://github.com/user-attachments/assets/f9545056-1234-4370-8b67-480ca901c85b)
+
+![image](https://github.com/user-attachments/assets/5548c0f0-7843-4213-992f-61f4d12f29e4)
+
+
 
 ### Code
 
@@ -99,7 +106,7 @@ Example result:
 "code-example": "<?php\n\n// This is my first hello world example\necho \"Hello world\";\n\n?>"
 ```
 
-Field options :
+#### Options
 
 ```json:no-line-numbers
 {
@@ -108,6 +115,8 @@ Field options :
   default: // set default text in CODE field
 }
 ```
+![image](https://github.com/user-attachments/assets/611d9c94-8e36-4e2b-afcf-b3a9917f4d2c)
+
 
 ### Collection page item
 
@@ -137,7 +146,7 @@ Example result:
 "color-example": "#ff0000"
 ```
 
-Field options :
+#### Options
 
 ```json:no-line-numbers
 {
@@ -146,6 +155,8 @@ Field options :
   default: // set default value
 }
 ```
+![image](https://github.com/user-attachments/assets/9aedddf7-02be-4d59-8d57-796ac6f89263)
+
 
 ### Content link
 
@@ -162,10 +173,17 @@ Example result:
 }
 ```
 
-** Options **
+#### Options
 
-- `display`: Displey preview of linked content item.
-  Example: `${data.title}`
+```json:no-line-numbers
+{
+  link: 'collectionName',
+  filter: null, // JSON format of fields conditions, example {contentFildName:'value'}
+  display: null, // displey preview of linked content item, example `${data.fieldNameInCamelCaseFormat}`
+}
+```
+![image](https://github.com/user-attachments/assets/c3fb3d1b-d574-4368-acc9-9defd543a5f7)
+
 
 ### Date
 
@@ -178,6 +196,21 @@ Example result:
 ```json:no-line-numbers
 "date-example": "2021-12-22" // your date in format YYYY-MM-DD
 ```
+
+#### Options
+
+```json:no-line-numbers
+{
+  readonly: false,
+  placeholder: 'placeholder',
+  min: '2025-01-01',
+  max: '2025-03-12',
+  step: 7,
+}
+```
+![image](https://github.com/user-attachments/assets/c4447759-a1f1-40a6-ac08-fb1756ea24d3)
+
+
 
 ### Date time
 
