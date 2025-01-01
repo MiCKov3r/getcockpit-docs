@@ -2,9 +2,31 @@
 
 Cockpit provides a set of fields for structuring and managing your content.
 
-It is generally not recommended to use *kebab-case* for field names, but instead *camel-case* - ***fieldName***.
+It is generally not recommended to use *kebab-case* for field names, but instead *camel-case* (***fieldName***).
 
 [[toc]]
+
+## Field settings
+
+When setting fields, some field properties can be configured directly through the GUI interface, while others can only be set via JSON.
+Each field must have two basic parameters: **name** and **type** (descriptions of the different types can be found below in the document).
+
+![Screenshot of a field settings](https://github.com/user-attachments/assets/71793837-490d-4751-809e-87c1b1b43215)
+
+The GUI interface contains 3 tabs:
+
+- **General**
+  - *Display name* - if you want to display a different/more user-friendly field name than the one defined in the NAME parameter.
+  - *Info* - field info text displayed under the field name
+  - *Group* - fields can be grouped into sets, which can be used to filter their display when inserting/editing records
+  - checkbox *Required* - setting the field as required
+  - checkbox *Localize field* - allows inserting localized values into fields according to the COCKPIT settings
+  - checkbox *Allow multiple values* - allows inserting multiple values into a field
+- **Options**
+  - contains parameters according to the field type
+- **Meta**
+  - Meta - meta information in JSON format
+  - Condition - show or hide field based on a condition, default value is ***TRUE*** 
 
 ## Field types
 
@@ -56,6 +78,15 @@ Example result:
 "boolean-example": false
 ```
 
+Field options :
+
+```json:no-line-numbers
+{
+  label: null, // checkbox field label
+  default: true // set default value to TRUE
+}
+```
+
 ### Code
 
 The *Code* field displays a textarea with monospace font and line numbers.
@@ -66,6 +97,16 @@ Example result:
 
 ```json:no-line-numbers
 "code-example": "<?php\n\n// This is my first hello world example\necho \"Hello world\";\n\n?>"
+```
+
+Field options :
+
+```json:no-line-numbers
+{
+  mode: null, // syntax highlight to CSS, HTML, JSON, JS, MD, PHP, YAML, XML
+  height: null // set height in PX
+  default: // set default text in CODE field
+}
 ```
 
 ### Collection page item
@@ -94,6 +135,16 @@ Example result:
 
 ```json:no-line-numbers
 "color-example": "#ff0000"
+```
+
+Field options :
+
+```json:no-line-numbers
+{
+  size: 40, // size of canvas size in PX
+  colors: [], // predefined list of colors 
+  default: // set default value
+}
 ```
 
 ### Content link
