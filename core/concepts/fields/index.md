@@ -19,9 +19,9 @@ The GUI interface contains 3 tabs:
   - *Display name* - if you want to display a different/more user-friendly field name than the one defined in the NAME parameter.
   - *Info* - field info text displayed under the field name
   - *Group* - fields can be grouped into sets, which can be used to filter their display when inserting/editing records
-  - checkbox *Required* - setting the field as required
-  - checkbox *Localize field* - allows inserting localized values into fields according to the COCKPIT settings
-  - checkbox *Allow multiple values* - allows inserting multiple values into a field
+  - *Required* - setting the field as required (checkbox)
+  - *Localize field* - allows inserting localized values into fields according to the COCKPIT settings (checkbox)
+  - *Allow multiple values* - allows inserting multiple values into a field (checkbox)
 - **Options**
   - contains parameters according to the field type
 - **Meta**
