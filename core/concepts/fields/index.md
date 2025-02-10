@@ -330,7 +330,7 @@ Use a *Number* field whenever you want to provide a numeric value your content m
 Example result:
 
 ```json:no-line-numbers
-"color-example": "#ff0000"
+"number-example": 42
 ```
 
 ### Object
